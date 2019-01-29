@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="app-container">
         <!-- header部分 -->
         <mt-header title="vue-study">
             <router-link to="/" slot="left">
@@ -9,8 +9,10 @@
         </mt-header>
 
         <!-- body部分 -->
-          <h1>顶部导航和底部tab栏</h1>
-          <router-view></router-view>
+          <transition>
+              <router-view></router-view>
+          </transition>
+          
         <!-- footer部分 -->
         <nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item" to="/home">
@@ -48,15 +50,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    h1 {
-        color: red;
+    .app-container {
+        overflow-x: hidden;
+        //设置激活类的另一种方法
+        // .router-link-active{
+
+        //color:#007aff !important;
+
+        // }
+        .v-enter,.v-leave-to {
+            // transform: translate(100%);
+            opacity: 0;
+        }
+        .v-enter-to,.v-leave {
+            transition: all 0.5s ease;
+        }
     }
 
-    // .router-link-active{
-
-    //   	color:#007aff !important;
-
-    // }
+    
 </style>
 
 
