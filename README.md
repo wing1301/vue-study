@@ -1,2 +1,2 @@
 # vue-study
-vue学习学习学习测试
+vue学习学习
