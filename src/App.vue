@@ -24,9 +24,9 @@
                 <!-- <span class="mui-badge">9</span></span> -->
 				<span class="mui-tab-label">项目</span>
 			</router-link>
-			<router-link class="mui-tab-item" to="/studynote">
-				<span class="mui-icon mui-icon-compose"></span>
-				<span class="mui-tab-label">笔记</span>
+			<router-link class="mui-tab-item" to="/studynews">
+				<span class="mui-icon mui-icon-extra mui-icon-extra-xiaoshuo"></span>
+				<span class="mui-tab-label">资讯</span>
 			</router-link>
 			<router-link class="mui-tab-item" to="/aboutme">
 				<span class="mui-icon mui-icon-contact"></span>

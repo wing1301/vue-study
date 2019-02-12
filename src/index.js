@@ -34,7 +34,14 @@ Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 
-
+//定义全局过滤器
+Vue.filter('dataFormat',function(date){
+    var d = new Date(date);
+    var year = d.getFullYear();
+    var month = d.getMonth() + 1;
+    var day = d.getDate();
+    return year + '-' + month + '-' + day;
+})
 
 var vm = new Vue({
     el: '#app',

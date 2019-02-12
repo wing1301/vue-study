@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>这是笔记组件</h1>
+        <h1>这是html页面</h1>
     </div>
 </template>
 
