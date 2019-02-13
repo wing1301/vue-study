@@ -8,8 +8,8 @@ import AboutMe from './components/tabbar/AboutMe.vue'
 
 //home页面html组件
 import Html from './components/home/Html.vue'
-
-
+//studynews页面newsinfo组件
+import NewsInfo from './components/studynews/NewsInfo.vue'
 
 var router = new vueRouter({
     routes: [
@@ -19,6 +19,7 @@ var router = new vueRouter({
         {path:"/studynews", component:StudyNews},
         {path:"/aboutme", component:AboutMe},
         {path:"/home/html", component:Html},
+        {path:"/studynews/getnew/:id", component:NewsInfo},
     ],
     linkActiveClass: "mui-active"
 });

@@ -1,7 +1,7 @@
 <template>
     <div class="newslist">
-        <ul>
-            <li v-for="item in newsList" :key="item.id">
+        <ul v-for="item in newsList" :key="item.id">
+            <router-link :to="'/studynews/getnew/'+item.id" class="newsitem" >
                 <div class="news">
                     <h3 class="title">{{ item.title }}</h3>
                     <p class="zhaiyao">{{ item.zhaiyao }}</p>
@@ -11,7 +11,7 @@
                     </p>
                 </div>
                 <img :src="item.img_url" alt="">
-            </li>
+            </router-link>
         </ul>
     </div>
 </template>
@@ -50,7 +50,8 @@
             margin: 0;
             list-style: none;
             
-            li {
+            .newsitem {
+                color: rgb(26, 26, 29);
                 display: flex;
                 padding: 5px;
                 margin-bottom: 4px;
@@ -60,6 +61,7 @@
                     h3{
                         font-size: 14px;
                         font-weight: normal;
+                        line-height: 18px;
                     }
                     p {
                         font-size: 12px;
@@ -76,7 +78,7 @@
                 }
                 img {
                 width: 120px;
-                height: 80px;
+                height: 90px;
                 margin-left: 5px;
                 
                 }

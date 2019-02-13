@@ -51,6 +51,7 @@ export default {
 
 <style lang="scss" scoped>
     .app-container {
+        padding: 40px 0 50px 0;
         overflow-x: hidden;
         //设置激活类的另一种方法
         // .router-link-active{
@@ -64,6 +65,15 @@ export default {
         }
         .v-enter-to,.v-leave {
             transition: all 0.5s ease;
+        }
+
+        .mint-header {
+            position: fixed;
+            width: 354px;
+            height: 40px;
+            top: 0;
+            left: 0;
+            z-index: 999;
         }
     }
 
