@@ -6,17 +6,24 @@
             <span>点击次数：{{ newsinfo.click }}次</span>
         </div>
         <div class="content" v-html="newsinfo.content"></div>
+        <comment :id="this.id"></comment>
     </div>
 </template>
 
 <script>
+    //导入Toast组件
     import { Toast } from "mint-ui"
+    //导入评论组件
+    import comment from "../pub/comment.vue"
     export default {
         data() {
             return {
                 id: this.$route.params.id,
                 newsinfo: {}
             }
+        },
+        components: {
+            comment
         },
         created() {
             this.getNewsInfo();
@@ -50,7 +57,12 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 4px;
             
+        }
+        .content {
+            border-bottom : 1px solid #ccc;
         }
         
     }
