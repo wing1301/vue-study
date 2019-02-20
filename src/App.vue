@@ -59,6 +59,9 @@ export default {
         //color:#007aff !important;
 
         // }
+        .mint-header[data-v-7ba5bd90] {
+            width: 100%;
+        }
         .v-enter,.v-leave-to {
             // transform: translate(100%);
             opacity: 0;
